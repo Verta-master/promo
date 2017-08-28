@@ -3,12 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta  name="viewport" content="width=device-width,initial-scale=1">
-  <title>Промо Лендинг</title>
+  <title>Lay Lay-Рекламное агенство в Краснодаре</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
   <header class="header">
-    
+    <div class="header__wrap">
+      <a href="http://laylaydigital.ru/" class="logo">
+        <img src="img/logo.png" alt="logo" class="logo__img" width="38" height="51">
+        <div class="logo__info">
+          <h3 class="logo__title">Lay Lay</h3>
+          <p class="logo__text">Digital agency</p>
+        </div>
+      </a>
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="#works" class="menu__link">Работы</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__call">
+        <a href="Tel:+789183101688" class="header__phone">8 (918) 310-16-88</a>
+        <button type="button" class="header__btn send">Связаться</button>
+      </div>
+    </div>
   </header>
   
   <main>
@@ -27,7 +46,7 @@
         <div class="niche__wrap">
           <img src="img/statue-2.png" alt="Кому нужен landing page?" class="niche__img" width="658" height="1026">
           <div class="niche__block">
-            <h2 class="title-h2">Кому нужен landing page?</h2>
+            <h2 class="title-h2 title-h2--niche">Кому нужен landing page?</h2>
             <p class="niche__text">Сегодня ни один бизнес проект и ни одна компания не обходятся без интернет-представительства. Качественный сайт, наполненный всей необходимой, важной и полезной информацией — это ваш дополнительный офис и виртуальный секретарь. Он расскажет Вашим клиентам о компании, обо всех ее преимуществах, товарах и услугах в красках и подробностях.</p>
             <h3 class="title-h3">А именно landing page подойдет:</h3>
             <ol class="niche__list">
@@ -47,7 +66,7 @@
     </section>
 
     <section class="benefits">
-      <div class="wrapper">
+      <div class="wrapper wrapper--benefits">
         <h2 class="title-h2">Нужна <span>прибыль</span>?<br>Что даст landing page?</h2>
         <img src="img/statue-3.png" alt="Что даст landing page?" class="benefits__img" width="1057" height="613">
         <div class="benefits__block benefits__block--abs">
@@ -68,7 +87,7 @@
     </section>
     
     <section class="step">
-      <div class="wrapper">
+      <div class="wrapper wrapper--step">
         <div class="step__title">
           <p class="step__number">5</p>
           <h2 class="step__name">Этапов<br>к прибыли!</h2>
@@ -99,7 +118,7 @@
             </ul>
             <button type="button" class="btn btn--step">Я сделаю 1 шаг к деньгам</button>
           </div>
-          <img src="img/statue-4.png" alt="5 Этапов к прибыли" class="step__img" width="896" height="903">
+          <img src="img/statue-4.png" alt="5 Этапов к прибыли" class="step__img" width="850" height="850">
         </div>
       </div>
     </section>
@@ -195,5 +214,32 @@
       </div>
     </div>
   </footer>
+  
+  <div class="modal">
+    <div class="modal__wrap">
+      <button class="modal__close">Закрыть</button>
+      <h2 class="modal__title">Оставьте заявку</h2>
+      <form action="#" method="post" class="modal__form">
+        <div class="modal__field">
+          <input type="text" name="name" id="name" class="modal__input" placeholder="Ваше имя">
+          <label for="name" class="modal__label">Ваше имя</label>
+        </div>
+        <div class="modal__field">
+          <input type="text" name="name" id="name" class="modal__input" placeholder="Ваш телефон">
+          <label for="name" class="modal__label">Ваш телефон</label>
+        </div>
+        <button type="submit" class="modal__send">Отправить</button>
+      </form>
+      <p class="modal__contacts">Контакты</p>
+      <p class="modal__info">
+        <a href="Tel:+79964098278" class="modal__link">8 (996) 409-82-78</a>
+        <a href="mailto:laylaydigital@gmail.com" class="modal__link">laylaydigital@gmail.com</a>
+      </p>
+    </div>
+  </div>
+  
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/script.js"></script>
+  
 </body>
 </html>
