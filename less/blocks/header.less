@@ -1,0 +1,55 @@
+.header {
+  width: 100%;
+  position: fixed;
+  background-color: rgba(26,25,30,0.5);
+  z-index: 10;
+}
+
+.header__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 45px;
+}
+
+.header__call {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__phone {
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header__btn {
+  width: 123px;
+  min-height: 26px;
+  margin-left: 47px;
+  color: #fff;
+  font-weight: 700;
+  text-align: left;
+  padding-left: 15px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  border-radius: 14px;
+  position: relative;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  
+  &::after {
+    content: "+";
+    position: absolute;
+    top: 0;
+    right: 15px;
+  }
+  
+  &:hover,
+  &:active {
+    color: @normal;
+    background-color: #fff;
+  }
+}

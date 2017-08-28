@@ -4,20 +4,39 @@
   background-image: url(../img/background-2.png);
   background-repeat: repeat-x;
   background-position: bottom;
+  position: relative;
+  
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 80%;
+    width: 32px;
+    height: 82px;
+    background-image: url(../img/zig-zag.png);
+    background-repeat: no-repeat;
+  }
+  
+  &::after {
+    top: 40px;
+    left: 70%;
+    transform: rotate(45deg);
+  }
 }
 
 .benefits__block {
   max-width: 480px;
   
   &:last-of-type {
-    margin-left: 80px;
+    margin-left: 100px;
     max-width: 455px;
   }
   
   &--abs {
     position: absolute;
-    bottom: 250px;
-    right: 0;
+    bottom: 145px;
+    right: 140px;
     max-width: 375px;
     margin-left: 0;
   }
@@ -30,4 +49,10 @@
 
 .benefits__wrap {
   display: flex;
+}
+
+.benefits__img {
+  display: block;
+  margin-top: 60px;
+  margin-left: -20px;
 }

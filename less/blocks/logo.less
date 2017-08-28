@@ -1,0 +1,41 @@
+.logo {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.logo__img {
+  display: block;
+  margin-right: 10px;
+}
+
+.logo__info {
+  padding-left: 10px;
+  position: relative;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 28px;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+  }
+}
+
+.logo__title {
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0;
+}
+
+.logo__text {
+  margin: 0;
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #aeaeae;
+}

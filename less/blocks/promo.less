@@ -1,6 +1,7 @@
 .promo {
   width: 100%;
   min-height: 1921px;
+  padding-top: 20px;
   background-image: url(../img/background.png);
   background-repeat: no-repeat;
   background-size: 100% 1921px;
@@ -8,8 +9,21 @@
   &--order {
     background-image: url(../img/background-4.png);
     background-size: 100% 820px;
-    padding-top: 200px;
+    padding-top: 165px;
     min-height: 820px;
+    position: relative;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 80px;
+      left: 75%;
+      transform: rotate(45deg);
+      width: 32px;
+      height: 82px;
+      background-image: url(../img/zig-zag.png);
+      background-repeat: no-repeat;
+    }
   }
 }
 
@@ -22,12 +36,14 @@
   line-height: 72px;
   color: @mint;
   font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
   
   span {
     display: block;
     font-family: "TrixieCyr-Plain", "Arial", sans-serif;
     font-size: 36px;
-    line-height: 60px;
+    line-height: 58px;
     font-weight: 400;
     color: @yellow;
     text-transform: uppercase;
@@ -40,8 +56,10 @@
   line-height: 48px;
   font-weight: 700;
   color: #fff;
+  margin-top: 30px;
   margin-bottom: 0;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .promo__date {
@@ -55,6 +73,7 @@
 }
 
 .promo__img {
+  display: block;
   position: absolute;
   top: 0;
   right: 0;
