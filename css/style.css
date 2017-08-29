@@ -2926,7 +2926,8 @@ yx-axis
   .work__block {
     width: 100%;
     height: 100%;
-    padding-top: 150px;
+    padding-top: 100px;
+    padding-left: 30px;
   }
 }
 @media (max-width: 480px) {
