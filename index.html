@@ -19,7 +19,7 @@
       <nav class="menu">
         <ul class="menu__list">
           <li class="menu__item">
-            <a href="#works" class="menu__link">Работы</a>
+            <a href="http://laylaydigital.ru/works/" class="menu__link">Работы</a>
           </li>
         </ul>
       </nav>
@@ -167,7 +167,9 @@
         <h2 class="title-h2">Несколько наших работ!</h2>
         <ul class="work__list">
           <li class="work__item">
-            <img src="img/work-1.jpg" alt="" class="work__img" width="540" height="540">
+            <a href="#" class="work__preview">
+              <img src="img/work-1.jpg" alt="" class="work__img" width="540" height="540">
+            </a>
             <div class="work__block">
               <p class="work__name">Фитнес центр</p>
               <p class="work__person">Заказчик «Fitness for Family»</p>
@@ -175,7 +177,9 @@
             </div>
           </li>
           <li class="work__item">
-            <img src="img/work-2.jpg" alt="" class="work__img" width="540" height="540">
+            <a href="#" class="work__preview">
+              <img src="img/work-2.jpg" alt="" class="work__img" width="540" height="540">
+            </a>
             <div class="work__block">
               <p class="work__name">Архитектурная компания</p>
               <p class="work__person">Заказчик КИП</p>
@@ -183,7 +187,9 @@
             </div>
           </li>
           <li class="work__item">
-            <img src="img/work-3.jpg" alt="" class="work__img" width="540" height="540">
+            <a href="#" class="work__preview">
+              <img src="img/work-3.jpg" alt="" class="work__img" width="540" height="540">
+            </a>
             <div class="work__block">
               <p class="work__name">Дизайн интерьера</p>
               <p class="work__person">Заказчик Игорь Стариков</p>
@@ -191,7 +197,9 @@
             </div>
           </li>
           <li class="work__item">
-            <img src="img/work-4.jpg" alt="" class="work__img" width="540" height="540">
+            <a href="#" class="work__preview">
+              <img src="img/work-4.jpg" alt="" class="work__img" width="540" height="540">
+            </a>
             <div class="work__block">
               <p class="work__name">Организация «СРО»</p>
               <p class="work__person">Заказчик «Единство»</p>
@@ -238,8 +246,23 @@
     </div>
   </div>
   
-  <script src="js/jquery-3.2.1.min.js"></script>
+<!--  <script src="js/jquery-3.2.1.min.js"></script>-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
   <script src="js/script.js"></script>
+  <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
   
+<!-- Custom scroll -->
+  <script>
+    (function($){
+      $(window).load(function(){
+
+        $("body").mCustomScrollbar({
+          theme:"dark-thin"
+        });
+
+      });
+    })(jQuery);
+  </script>
 </body>
 </html>
