@@ -1,13 +1,13 @@
-//.arcticmodal-overlay,
-//.arcticmodal-container { position: fixed; left: 0; top: 0; right: 0; bottom: 0; z-index: 1000; }
-//.arcticmodal-container { overflow: auto; margin: 0; padding: 0; border: 0; border-collapse: collapse; }
-//*:first-child+html .arcticmodal-container { height: 100% }
-//.arcticmodal-container_i { height: 100%; margin: 0 auto; }
-//.arcticmodal-container_i2 { padding: 24px; margin: 0; border: 0; vertical-align: middle; }
-//.arcticmodal-error { padding: 20px; border-radius: 10px; background: #000; color: #fff; }
-//.arcticmodal-loading { width: 80px; height: 80px; border-radius: 10px; background: #000 url(loading.gif) no-repeat 50% 50%; }
+.arcticmodal-overlay,
+.arcticmodal-container { position: fixed; left: 0; top: 0; right: 0; bottom: 0; z-index: 1000; }
+.arcticmodal-container { overflow: auto; margin: 0; padding: 0; border: 0; border-collapse: collapse; }
+*:first-child+html .arcticmodal-container { height: 100% }
+.arcticmodal-container_i { height: 100%; margin: 0 auto; }
+.arcticmodal-container_i2 { padding: 24px; margin: 0; border: 0; vertical-align: middle; }
+.arcticmodal-error { padding: 20px; border-radius: 10px; background: #000; color: #fff; }
+.arcticmodal-loading { width: 80px; height: 80px; border-radius: 10px; background: #000 url(loading.gif) no-repeat 50% 50%; }
 
-.modal {
+.box-modal {
   position: fixed;
   top: 0;
   right: 0;
@@ -15,13 +15,10 @@
   height: 100vh;
   padding: 45px 55px 45px 50px;
   background-color: #fff;
-  display: none;
   align-items: center;
   z-index: 20;
-}
-
-.modal__show {
   display: flex;
+  align-items: center;
   animation-duration: 1s;
   animation-name: slideInRight;
 }
@@ -30,7 +27,7 @@
   width: 100%;
 }
 
-.modal__close {
+.box-modal_close {
   position: absolute;
   top: 45px;
   right: 55px;
@@ -50,13 +47,13 @@
 .modal__title {
   font-size: 24px;
   line-height: 28px;
-  font-weight: 500px;
+  font-weight: 500;
   letter-spacing: 1px;
 }
 
 .modal__form {
   margin-top: 40px;
-  margin-bottom: 50px;
+  margin-bottom: 90px;
 }
 
 .modal__field {
@@ -103,7 +100,7 @@
   font-size: 16px;
   line-height: 1.2;
   font-weight: 300;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   border: 1px solid @normal;
   background-color: transparent;
   border-radius: 20px;

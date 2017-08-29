@@ -1,0 +1,223 @@
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+header {
+    width: 100%
+}
+.header_container {
+    padding: 25px 40px;
+    min-height: 107px;
+    position: relative;
+    -webkit-transition: all .3s;
+    transition: all .3s
+}
+
+.header_container .logo {
+    z-index: 10;
+    float: left;
+    margin-right: 9%;
+    width: 180px
+}
+
+.header_container img {
+    display: block;
+    float: left;
+    margin-right: 10px;
+    position: relative;
+    z-index: 100
+}
+
+.header_container .logo_info {
+    float: left;
+    padding-left: 10px;
+    border-left: 1px solid #aeaeae;
+    margin-top: 10px;
+    position: relative;
+    z-index: 200
+}
+.header_container h3 {
+    font-family: MuseoSansCyrl7;
+    font-size: 15px;
+    line-height: 15px;
+    margin: 0 0 8px
+}
+
+.header_container p {
+    font-family: MuseoSansCyrl5;
+    font-size: 9px;
+    color: #aeaeae;
+    line-height: 9px
+}
+
+.header_container ul {
+    width: 300px;
+    float: left;
+    padding-top: 20px
+}
+
+.header_container ul li {
+    display: inline-block;
+    width: 90px;
+    text-align: center
+}
+
+.header_container ul li a {
+    font-family: MuseoSansCyrl7;
+    font-size: 13px;
+    position: relative;
+    z-index: 1000
+}
+.header_container ul li a:before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #000;
+    top: 7px;
+    left: -2px;
+    -webkit-transition: all .3s;
+    transition: all .3s
+}
+
+.header_container ul li .active:before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 52px;
+    height: 2px;
+    background: #000;
+    top: 7px;
+    left: -2px
+}
+
+.header_container ul li:hover a:before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 52px;
+    height: 2px;
+    background: #000;
+    top: 7px;
+    left: -2px
+}
+
+.header_container ul:hover .active:before {
+    width: 0
+}
+.header_container ul:hover .active:hover:before {
+    width: 52px
+}
+
+.header_container .header_call {
+    z-index: 1000;
+    float: right;
+    padding-top: 15px
+}
+
+.header_container .header_call a {
+    font-family: MuseoSansCyrl7;
+    font-size: 13px
+}
+
+.header_container .header_call a:first-child {
+    display: inline-block;
+    z-index: 10;
+    margin-right: 50px;
+    position: relative
+}
+
+.header_container .header_call a:last-child {
+    display: inline-block;
+    width: 125px;
+    height: 28px;
+    border: 2px solid #000;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    text-align: center;
+    z-index: 10000;
+    line-height: 24px
+}
+.header_container .show_nav {
+    border: 2px solid #000;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    display: none;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: 20px;
+    top: 35px;
+    z-index: 1000;
+    bottom: -10px
+}
+
+.header_container .show_nav span {
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    top: 2.5px;
+    left: 2.5px;
+    position: absolute;
+    background: url(../img/icon/menu.svg) no-repeat 50% 50%
+}
+.works_header .logo_info_whi h3 {
+    color: #fff
+}
+
+.slide_color .header_container .logo_info:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: -50px;
+    width: 40px;
+    height: 55px;
+    background: url(../img/icon/logo1.png) no-repeat 50% 50%
+}
+
+.slide_color .header_container img {
+    opacity: 0
+}
+
+header button {
+    outline: 0;
+    height: 28px;
+    text-align: center;
+    width: 125px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    background: 0 0;
+    padding-right: 20px;
+    border: 1px solid #000;
+    color: #000;
+    letter-spacing: 1px;
+    text-shadow: 0;
+    font-size: 13px;
+    cursor: pointer;
+    -webkit-transition: all .25s ease;
+    transition: all .25s ease;
+    position: relative;
+    font-family: MuseoSansCyrl7;
+    z-index: 100
+}
+
+header button:hover {
+    color: #fff;
+    background: #000
+}
+
+header button:after {
+    content: "+";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: -1px;
+    right: 7px;
+    font-size: 20px;
+    font-family: MuseoSansCyrl3
+}

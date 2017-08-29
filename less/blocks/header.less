@@ -1,5 +1,6 @@
 .header {
   width: 100%;
+  padding: 25px 40px;
   position: fixed;
   background-color: rgba(26,25,30,0.5);
   z-index: 10;
@@ -9,13 +10,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 45px;
+  position: relative;
 }
 
 .header__call {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: absolute;
+  top: 15px;
+  right: 0;
 }
 
 .header__phone {
@@ -29,6 +33,7 @@
   width: 123px;
   min-height: 26px;
   margin-left: 47px;
+  font-family: "Museo Sans", "Arial", sans-serif;
   color: #fff;
   font-weight: 700;
   text-align: left;

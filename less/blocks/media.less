@@ -1,3 +1,20 @@
+@media @res-1600 {
+  .menu {
+    width: auto;
+    margin-left: 45px;
+    padding-top: 0;
+  }
+  
+  .header__call,
+  .logo {
+    position: static;
+  }
+  
+  .header__call {
+    padding-top: 0;
+  }
+}
+//------------------------------
 @media @tablet {
   .wrapper {
     width: 768px;
@@ -9,7 +26,7 @@
     &--promo {
       width: 768px;
       min-height: 800px;
-      padding-top: 130px;
+      padding-top: 150px;
     }
     
     &--benefits {
@@ -179,7 +196,7 @@
     .visually-hidden;
   }
   
-  .header__wrap {
+  .header {
     padding: 20px 10px;
   }
 
@@ -274,12 +291,12 @@
     padding: 20px 0;
   }
   
-  .modal {
+  .box-modal {
     width: 300px;
     padding: 25px;
   }
   
-  .modal__close {
+  .box-modal_close {
     top: 20px;
   }
 }
@@ -320,10 +337,6 @@
 //--------mobile 480 ------------
 
 @media @mobile-480 {
-  .stat__wrap {
-//    flex-direction: column;
-  }
-  
   .btn--stat {
     margin-left: 10px;
   }
@@ -352,4 +365,6 @@
   .stat__wrap {
     padding-left: 0;
   }
+  
+  
 }
