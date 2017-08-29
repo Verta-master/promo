@@ -1335,7 +1335,10 @@ img {
     font-size: 24px;
     line-height: 36px;
   }
-  .step__name,
+  .step__name {
+    font-size: 32px;
+    line-height: 40px;
+  }
   .title-h2 {
     font-size: 36px;
     line-height: 40px;
@@ -1421,5 +1424,12 @@ img {
   }
   .footer {
     padding: 20px 0;
+  }
+  .modal {
+    width: 300px;
+    padding: 25px;
+  }
+  .modal__close {
+    top: 20px;
   }
 }
