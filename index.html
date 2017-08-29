@@ -165,7 +165,7 @@
     
     <section class="work">
       <div class="wrapper">
-        <h2 class="title-h2">Несколько наших работ!</h2>
+        <h2 class="title-h2 title-h2--center">Несколько наших работ!</h2>
         <ul class="work__list">
           <li class="work__item">
             <a href="#" class="work__preview">
@@ -254,6 +254,7 @@
   <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
   
 <!-- Custom scroll -->
+<!--
   <script>
     (function($){
       $(window).load(function(){
@@ -265,5 +266,23 @@
       });
     })(jQuery);
   </script>
+-->
+  
+<!-- Ajax form -->
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $(".modal__form").submit(function() { //устанавливаем событие отправки для формы с id=form
+        var form_data = $(this).serialize(); //собераем все данные из формы
+        $.ajax({
+        type: "POST", //Метод отправки
+        url: "send.php", //путь до php фаила отправителя
+        data: form_data,
+        success: function() {
+               //код в этом блоке выполняется при успешной отправке сообщения
+               alert("Ваше сообщение отпрвлено!");
+        });
+      });
+    });    
+</script>
 </body>
 </html>

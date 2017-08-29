@@ -1,15 +1,15 @@
 @media @tablet {
   .wrapper {
     width: 768px;
-    padding: 0 20px;
+    padding: 0 30px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     
     &--promo {
       width: 768px;
-      padding-left: 20px;
-      padding-top: 100px;
+      min-height: 800px;
+      padding-top: 130px;
     }
     
     &--benefits {
@@ -21,8 +21,20 @@
     }
   }
   
+  .promo {
+    background-size: cover;
+    background-position: top;
+  }
+  
   .promo__img {
-    position: static;
+    left: 65%;
+    z-index: 0;
+    width: 50%;
+    height: auto;
+  }
+  
+  .promo__block {
+    z-index: 1;
   }
   
   .promo--order {
@@ -38,22 +50,22 @@
     flex-wrap: wrap;
   }
   
-  .niche__img {
-    order: 2;
+  .niche__block {
+    padding-left: 30px;
+    width: 100%;
   }
   
-  .niche__block {
-    order: 1;
-    padding-left: 20px;
+  .niche__text {
+    padding-right: 20px;
   }
   
   .benefits {
-    padding-bottom: 50px;
+    padding-bottom: 0;
   }
   
   .benefits__img {
-    width: 728px;
-    height: 380px;
+    width: 75%;
+    height: auto;
     margin: 0;
   }
   
@@ -67,9 +79,10 @@
   }
   
   .benefits__block--abs {
-    margin-top: 0;
-    width: 350px;
-    right: 50px;
+    position: static;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 100%;
   }
   
   .title-h2--stat,
@@ -80,6 +93,15 @@
   .btn--step,
   .btn--niche {
     margin-bottom: 0;
+  }
+  
+  .btn--step {
+    margin-bottom: 40px;
+  }
+  
+  .step {
+    background-position: top center;
+    padding-top: 150px;
   }
   
   .step__wrap {
@@ -95,12 +117,7 @@
     padding-top: 0;
   }
   
-  .stat__img {
-    order: 2;
-  }
-  
   .stat__part {
-    order: 1;
     padding-top: 0;
   }
   
@@ -111,6 +128,7 @@
   .work__list {
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
   }
   
   .footer {
@@ -127,12 +145,10 @@
     margin-bottom: 20px;
   }
 }
-
 //---------------------Mobile----------------
 @media @mobile {
   .wrapper {
     width: 100%;
-    padding: 0 10px;
     
     &--promo,
     &--benefits {
@@ -140,8 +156,18 @@
     }
     
     &--promo {
-      padding-top: 70px;
+      padding-top: 100px;
+      min-height: auto;
     }
+  }
+  
+  .promo {
+    min-height: auto;
+    padding-bottom: 40px;
+  }
+  
+  .promo__img {
+    display: none;
   }
   
   .niche__wrap {
@@ -156,25 +182,10 @@
   .header__wrap {
     padding: 20px 10px;
   }
-  
-  .promo__h1 {
-    font-size: 40px;
-    line-height: 48px;
-    
-    span {
-      font-size: 24px;
-      line-height: 36px;
-    }
-  }
-  
-  .promo__price {
-    font-size: 24px;
-    line-height: 36px;
-  }
-  
+
   .step__name {
     font-size: 32px;
-    line-height: 40px;
+    line-height: 32px;
   }
   
   .title-h2 {
@@ -183,13 +194,10 @@
     letter-spacing: 2px;
   }
   
-  .niche__block {
-    padding-left: 10px;
-  }
-  
   .benefits__img {
     width: 100%;
     height: auto;
+    margin-bottom: 30px;
   }
   
   .benefits__block--abs {
@@ -236,29 +244,10 @@
     max-width: 100%;
   }
   
-  .stat__spot {
-    width: 100%;
-    background-size: 100% 100%;
-    padding: 15px 40px 20px 40px;
-  }
-  
-  .title-h2--stat,
-  .stat__wrap,
-  .stat__block {
-    padding-left: 10px;
-  }
-  
-  .btn--stat {
-    margin-left: 0;
-  }
-  
-  .stat__wrap {
-    flex-direction: column;
-  }
-  
   .promo--order {
+    padding-bottom: 100px;
     background-size: cover;
-    min-height: 700px;
+    background-position: left -50px top;
   }
   
   .work {
@@ -268,16 +257,17 @@
   .work__item {
     width: 100%;
     height: auto;
+    overflow: hidden;
     margin-right: 0;
   }
   
-//  .work__block {
-//    left: 20px;
-//    top: 40%;
-//  }
-  
   .work__link {
     margin-top: 30px;
+  }
+  
+  .work__block {
+    width: 540px;
+    height: 540px;
   }
   
   .footer {
@@ -291,5 +281,75 @@
   
   .modal__close {
     top: 20px;
+  }
+}
+
+//------------------- 660px -----------------
+@media @mobile-min {
+  .wrapper {
+    &--promo {
+      padding-top: 100px;
+    }
+  }
+  
+  .promo__h1 {
+    font-size: 40px;
+    line-height: 48px;
+    
+    span {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+  
+  .promo__price {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .niche__block {
+    padding-left: 10px;
+  }
+  
+  .work__block {
+    width: 100%;
+    height: 100%;
+    padding-top: 150px;
+  }
+}
+//--------mobile 480 ------------
+
+@media @mobile-480 {
+  .stat__wrap {
+//    flex-direction: column;
+  }
+  
+  .btn--stat {
+    margin-left: 10px;
+  }
+  .wrapper {
+    padding: 0 10px;
+    
+    &--promo {
+      padding-top: 100px;
+    }
+  }
+  
+  .step {
+    padding-top: 180px;
+    background-position: left top;
+  }
+  
+  .stat__spot {
+    width: 100%;
+    background-size: 100% 100%;
+    padding-left: 40px;
+    padding-right: 20px;
+  }
+  
+  .title-h2--stat,
+  .stat__block,
+  .stat__wrap {
+    padding-left: 0;
   }
 }
