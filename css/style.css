@@ -1179,3 +1179,247 @@ img {
   animation-duration: 1s;
   animation-name: slideOutRight;
 }
+@media (max-width: 1025px) {
+  .wrapper {
+    width: 768px;
+    padding: 0 20px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  .wrapper--promo {
+    width: 768px;
+    padding-left: 20px;
+    padding-top: 100px;
+  }
+  .wrapper--benefits {
+    width: 768px;
+  }
+  .wrapper--footer {
+    -ms-flex-align: center;
+        align-items: center;
+  }
+  .promo__img {
+    position: static;
+  }
+  .promo--order {
+    padding-top: 100px;
+  }
+  .niche {
+    margin-bottom: 0;
+  }
+  .niche__wrap {
+    width: 768px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .niche__img {
+    -ms-flex-order: 2;
+        order: 2;
+  }
+  .niche__block {
+    -ms-flex-order: 1;
+        order: 1;
+    padding-left: 20px;
+  }
+  .benefits {
+    padding-bottom: 50px;
+  }
+  .benefits__img {
+    width: 728px;
+    height: 380px;
+    margin: 0;
+  }
+  .benefits__block {
+    margin-top: 50px;
+    width: 300px;
+  }
+  .benefits__block:last-of-type {
+    margin-left: 50px;
+  }
+  .benefits__block--abs {
+    margin-top: 0;
+    width: 350px;
+    right: 50px;
+  }
+  .title-h2--stat,
+  .title-h2--niche {
+    margin-top: 0;
+  }
+  .btn--step,
+  .btn--niche {
+    margin-bottom: 0;
+  }
+  .step__wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .step__img {
+    width: 100%;
+    height: auto;
+  }
+  .stat {
+    padding-top: 0;
+  }
+  .stat__img {
+    -ms-flex-order: 2;
+        order: 2;
+  }
+  .stat__part {
+    -ms-flex-order: 1;
+        order: 1;
+    padding-top: 0;
+  }
+  .work {
+    padding-top: 40px;
+  }
+  .work__list {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+  .footer {
+    padding-top: 40px;
+  }
+  .footer__block,
+  .footer__link,
+  .footer__text {
+    text-align: center;
+  }
+  .footer__block {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .wrapper {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .wrapper--promo,
+  .wrapper--benefits {
+    width: 100%;
+  }
+  .wrapper--promo {
+    padding-top: 70px;
+  }
+  .niche__wrap {
+    width: 100%;
+  }
+  .header__phone,
+  .menu {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  .header__wrap {
+    padding: 20px 10px;
+  }
+  .promo__h1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .promo__h1 span {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .promo__price {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .step__name,
+  .title-h2 {
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: 2px;
+  }
+  .niche__block {
+    padding-left: 10px;
+  }
+  .benefits__img {
+    width: 100%;
+    height: auto;
+  }
+  .benefits__block--abs {
+    position: static;
+    max-width: 100%;
+  }
+  .benefits__wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .benefits__block {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  .benefits__block:last-of-type {
+    margin: 0;
+  }
+  .benefits {
+    padding-bottom: 0;
+  }
+  .step__number {
+    font-size: 100px;
+  }
+  .step__list {
+    width: 100%;
+  }
+  .step__item {
+    margin-bottom: 25px;
+  }
+  .step__promo {
+    margin-bottom: 25px;
+  }
+  .stat__part {
+    max-width: 100%;
+  }
+  .stat__spot {
+    width: 100%;
+    background-size: 100% 100%;
+    padding: 15px 40px 20px 40px;
+  }
+  .title-h2--stat,
+  .stat__wrap,
+  .stat__block {
+    padding-left: 10px;
+  }
+  .btn--stat {
+    margin-left: 0;
+  }
+  .stat__wrap {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  .promo--order {
+    background-size: cover;
+    min-height: 700px;
+  }
+  .work {
+    padding-top: 0;
+  }
+  .work__item {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+  }
+  .work__block {
+    left: 20px;
+    top: 40%;
+  }
+  .work__link {
+    margin-top: 30px;
+  }
+  .footer {
+    padding: 20px 0;
+  }
+}
