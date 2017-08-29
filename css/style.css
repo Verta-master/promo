@@ -691,6 +691,8 @@ img {
   min-height: 56px;
   cursor: pointer;
   outline: none;
+  box-shadow: 2px 2px 10px rgba(43, 54, 61, 0.4), 0px 0px 0px 3px rgba(116, 161, 191, 0.3) inset;
+  transition: all 0.3s ease-in-out;
 }
 .btn--niche {
   width: 211px;
@@ -700,16 +702,10 @@ img {
 .btn--step {
   width: 266px;
   margin-bottom: 170px;
-  color: #ecf0f2;
-  text-shadow: 1px 1px 2px rgba(120, 155, 179, 0.5);
-  box-shadow: 2px 2px 10px rgba(43, 54, 61, 0.4), 0px 0px 0px 9px rgba(116, 161, 191, 0.3) inset;
-  transition: all 0.3s ease-in-out;
 }
-.btn--step:hover {
-  box-shadow: 2px 2px 10px rgba(43, 54, 61, 0.4), 0px 0px 0px 0px #fedc3f inset, 0px 0px 100px 30px rgba(255, 244, 193, 0.8);
-  color: #ff8624;
-  text-shadow: 1px 1px 2px rgba(166, 97, 41, 0.5), 1px 1px 1px #e66212, 3px 3px 1px #fdff64, 4px 4px 6px #ff7420;
-  background-image: radial-gradient(center center, circle contain, #fedc3f 0%, #ff7420 100%);
+.btn:hover {
+  background-color: #ef1616;
+  box-shadow: 2px 2px 5px rgba(43, 54, 61, 0.4), 0px 0px 0px 0px #fedc3f inset, 0px 0px 50px 5px rgba(255, 244, 193, 0.8);
 }
 .btn--stat {
   width: 127px;
@@ -763,6 +759,9 @@ img {
 }
 .title-h2--niche {
   margin-bottom: 25px;
+}
+.title-h2--center {
+  text-align: center;
 }
 .title-h3 {
   font-size: 22px;
@@ -1072,7 +1071,7 @@ img {
   transition: 0.3s ease-in-out;
 }
 .work__item:hover .work__img {
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
 .footer {
   width: 100%;
@@ -2601,7 +2600,7 @@ yx-axis
 @media (max-width: 1025px) {
   .wrapper {
     width: 768px;
-    padding: 0 20px;
+    padding: 0 30px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -2611,8 +2610,8 @@ yx-axis
   }
   .wrapper--promo {
     width: 768px;
-    padding-left: 20px;
-    padding-top: 100px;
+    min-height: 800px;
+    padding-top: 130px;
   }
   .wrapper--benefits {
     width: 768px;
@@ -2621,8 +2620,18 @@ yx-axis
     -ms-flex-align: center;
         align-items: center;
   }
+  .promo {
+    background-size: cover;
+    background-position: top;
+  }
   .promo__img {
-    position: static;
+    left: 65%;
+    z-index: 0;
+    width: 50%;
+    height: auto;
+  }
+  .promo__block {
+    z-index: 1;
   }
   .promo--order {
     padding-top: 100px;
@@ -2635,21 +2644,19 @@ yx-axis
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .niche__img {
-    -ms-flex-order: 2;
-        order: 2;
-  }
   .niche__block {
-    -ms-flex-order: 1;
-        order: 1;
-    padding-left: 20px;
+    padding-left: 30px;
+    width: 100%;
+  }
+  .niche__text {
+    padding-right: 20px;
   }
   .benefits {
-    padding-bottom: 50px;
+    padding-bottom: 0;
   }
   .benefits__img {
-    width: 728px;
-    height: 380px;
+    width: 75%;
+    height: auto;
     margin: 0;
   }
   .benefits__block {
@@ -2660,9 +2667,10 @@ yx-axis
     margin-left: 50px;
   }
   .benefits__block--abs {
-    margin-top: 0;
-    width: 350px;
-    right: 50px;
+    position: static;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 100%;
   }
   .title-h2--stat,
   .title-h2--niche {
@@ -2671,6 +2679,13 @@ yx-axis
   .btn--step,
   .btn--niche {
     margin-bottom: 0;
+  }
+  .btn--step {
+    margin-bottom: 40px;
+  }
+  .step {
+    background-position: top center;
+    padding-top: 150px;
   }
   .step__wrap {
     -ms-flex-wrap: wrap;
@@ -2683,13 +2698,7 @@ yx-axis
   .stat {
     padding-top: 0;
   }
-  .stat__img {
-    -ms-flex-order: 2;
-        order: 2;
-  }
   .stat__part {
-    -ms-flex-order: 1;
-        order: 1;
     padding-top: 0;
   }
   .work {
@@ -2700,6 +2709,7 @@ yx-axis
         flex-direction: column;
     -ms-flex-align: center;
         align-items: center;
+    margin: 0 auto;
   }
   .footer {
     padding-top: 40px;
@@ -2716,14 +2726,21 @@ yx-axis
 @media (max-width: 767px) {
   .wrapper {
     width: 100%;
-    padding: 0 10px;
   }
   .wrapper--promo,
   .wrapper--benefits {
     width: 100%;
   }
   .wrapper--promo {
-    padding-top: 70px;
+    padding-top: 100px;
+    min-height: auto;
+  }
+  .promo {
+    min-height: auto;
+    padding-bottom: 40px;
+  }
+  .promo__img {
+    display: none;
   }
   .niche__wrap {
     width: 100%;
@@ -2742,33 +2759,19 @@ yx-axis
   .header__wrap {
     padding: 20px 10px;
   }
-  .promo__h1 {
-    font-size: 40px;
-    line-height: 48px;
-  }
-  .promo__h1 span {
-    font-size: 24px;
-    line-height: 36px;
-  }
-  .promo__price {
-    font-size: 24px;
-    line-height: 36px;
-  }
   .step__name {
     font-size: 32px;
-    line-height: 40px;
+    line-height: 32px;
   }
   .title-h2 {
     font-size: 36px;
     line-height: 40px;
     letter-spacing: 2px;
   }
-  .niche__block {
-    padding-left: 10px;
-  }
   .benefits__img {
     width: 100%;
     height: auto;
+    margin-bottom: 30px;
   }
   .benefits__block--abs {
     position: static;
@@ -2805,26 +2808,10 @@ yx-axis
   .stat__part {
     max-width: 100%;
   }
-  .stat__spot {
-    width: 100%;
-    background-size: 100% 100%;
-    padding: 15px 40px 20px 40px;
-  }
-  .title-h2--stat,
-  .stat__wrap,
-  .stat__block {
-    padding-left: 10px;
-  }
-  .btn--stat {
-    margin-left: 0;
-  }
-  .stat__wrap {
-    -ms-flex-direction: column;
-        flex-direction: column;
-  }
   .promo--order {
+    padding-bottom: 100px;
     background-size: cover;
-    min-height: 700px;
+    background-position: left -50px top;
   }
   .work {
     padding-top: 0;
@@ -2832,10 +2819,15 @@ yx-axis
   .work__item {
     width: 100%;
     height: auto;
+    overflow: hidden;
     margin-right: 0;
   }
   .work__link {
     margin-top: 30px;
+  }
+  .work__block {
+    width: 540px;
+    height: 540px;
   }
   .footer {
     padding: 20px 0;
@@ -2846,5 +2838,56 @@ yx-axis
   }
   .modal__close {
     top: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .wrapper--promo {
+    padding-top: 100px;
+  }
+  .promo__h1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .promo__h1 span {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .promo__price {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .niche__block {
+    padding-left: 10px;
+  }
+  .work__block {
+    width: 100%;
+    height: 100%;
+    padding-top: 150px;
+  }
+}
+@media (max-width: 480px) {
+  .btn--stat {
+    margin-left: 10px;
+  }
+  .wrapper {
+    padding: 0 10px;
+  }
+  .wrapper--promo {
+    padding-top: 100px;
+  }
+  .step {
+    padding-top: 180px;
+    background-position: left top;
+  }
+  .stat__spot {
+    width: 100%;
+    background-size: 100% 100%;
+    padding-left: 40px;
+    padding-right: 20px;
+  }
+  .title-h2--stat,
+  .stat__block,
+  .stat__wrap {
+    padding-left: 0;
   }
 }
