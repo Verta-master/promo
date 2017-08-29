@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta  name="viewport" content="width=device-width,initial-scale=1">
   <title>Lay Lay-Рекламное агенство в Краснодаре</title>
+  <link rel="shortcut icon" href="img/favicon.png" type="image/png">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -227,14 +228,14 @@
     <div class="modal__wrap">
       <button class="modal__close">Закрыть</button>
       <h2 class="modal__title">Оставьте заявку</h2>
-      <form action="#" method="post" class="modal__form">
+      <form action="send.php" method="post" class="modal__form">
         <div class="modal__field">
-          <input type="text" name="name" id="name" class="modal__input" placeholder="Ваше имя">
+          <input type="text" name="name" id="name" class="modal__input" placeholder="Ваше имя" required>
           <label for="name" class="modal__label">Ваше имя</label>
         </div>
         <div class="modal__field">
-          <input type="text" name="name" id="name" class="modal__input" placeholder="Ваш телефон">
-          <label for="name" class="modal__label">Ваш телефон</label>
+          <input type="text" name="phone" id="phone" class="modal__input" placeholder="Ваш телефон" required>
+          <label for="phone" class="modal__label">Ваш телефон</label>
         </div>
         <button type="submit" class="modal__send">Отправить</button>
       </form>
@@ -248,7 +249,7 @@
   
 <!--  <script src="js/jquery-3.2.1.min.js"></script>-->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
+  <script src="js/jquery.mousewheel.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
   
