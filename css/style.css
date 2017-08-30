@@ -442,6 +442,7 @@ img {
 .header {
   width: 100%;
   padding: 25px 40px;
+  padding-bottom: 40px;
   position: fixed;
   background-color: transparent;
   z-index: 10;
@@ -590,7 +591,8 @@ img {
   padding-top: 20px;
   background-image: url(../img/background.png);
   background-repeat: no-repeat;
-  background-size: 100% 1921px;
+  background-size: cover;
+  background-position: center top;
 }
 .promo--order {
   background-image: url(../img/background-4.png);
@@ -1153,7 +1155,7 @@ img {
   right: 0;
   width: 440px;
   height: 100vh;
-  padding: 45px 55px 45px 50px;
+  padding: 25px 50px;
   background-color: #fff;
   z-index: 20;
   display: -ms-flexbox;
@@ -1168,7 +1170,7 @@ img {
 }
 .box-modal_close {
   position: absolute;
-  top: 45px;
+  top: 32px;
   right: 55px;
   font-weight: 700;
   text-align: right;
@@ -1194,28 +1196,32 @@ img {
 }
 .modal__field {
   position: relative;
-  padding-top: 15px;
-  margin-bottom: 10px;
+  padding-top: 1px;
+  margin-bottom: 5px;
 }
 .modal__label {
-  display: none;
   position: absolute;
-  top: 0;
+  top: 15px;
   left: 0;
-  color: #333;
-  font-size: 9px;
+  color: #a8a8a8;
+  font-size: 13px;
   line-height: 1.2;
   font-weight: 100;
 }
 .modal__input {
-  font-weight: 100;
+  font-weight: 400;
   width: 100%;
   min-height: 21px;
   border: none;
+  outline: none;
+  padding: 10px 0;
   border-bottom: 1px solid rgba(51, 51, 51, 0.3);
 }
 .modal__input:focus + .modal__label {
-  display: block;
+  top: 0;
+  font-size: 9px;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.2s ease-in-out;
 }
 .modal__input:focus {
   border-bottom: 1px solid #333333;
@@ -1230,16 +1236,15 @@ img {
   opacity: 0;
 }
 .modal__send {
-  width: 124px;
-  min-height: 35px;
+  width: 125px;
+  min-height: 36px;
   margin-top: 40px;
   font-size: 16px;
   line-height: 1.2;
-  font-weight: 300;
-  letter-spacing: 1px;
+  font-weight: 400;
   border: 1px solid #100f14;
   background-color: transparent;
-  border-radius: 20px;
+  border-radius: 50px;
   cursor: pointer;
   transition: ease-out 0.5s;
 }
@@ -1252,16 +1257,16 @@ img {
   margin: 0;
   font-size: 24px;
   line-height: 28px;
-  font-weight: 300;
-  letter-spacing: 2px;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 .modal__info {
   width: 100%;
   margin-top: 30px;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
   -ms-flex-align: center;
       align-items: center;
 }
@@ -1269,6 +1274,7 @@ img {
   font-weight: 100;
   color: #100f14;
   text-decoration: none;
+  padding-right: 20px;
 }
 @keyframes slideInRight {
   from {
@@ -2660,6 +2666,9 @@ yx-axis
   .header__call {
     padding-top: 0;
   }
+  .header {
+    padding-bottom: 25px;
+  }
 }
 @media (max-width: 1025px) {
   .wrapper {
@@ -2686,11 +2695,11 @@ yx-axis
   }
   .promo {
     background-size: cover;
-    background-position: top;
+    background-position: top -170px center;
   }
   .promo__img {
     left: 65%;
-    z-index: 0;
+    z-index: 1;
     width: 50%;
     height: auto;
   }
@@ -2699,6 +2708,7 @@ yx-axis
   }
   .promo--order {
     padding-top: 100px;
+    background-position: left top;
   }
   .niche {
     margin-bottom: 0;
@@ -2707,6 +2717,7 @@ yx-axis
     width: 768px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    padding-top: 300px;
   }
   .niche__block {
     padding-left: 30px;
@@ -2802,6 +2813,7 @@ yx-axis
   .promo {
     min-height: auto;
     padding-bottom: 40px;
+    background-position: top -350px center;
   }
   .promo__img {
     display: none;
@@ -2896,15 +2908,50 @@ yx-axis
   .footer {
     padding: 20px 0;
   }
-  .box-modal {
-    width: 300px;
-    padding: 25px;
-  }
-  .box-modal_close {
-    top: 20px;
-  }
 }
 @media (max-width: 600px) {
+  .wrapper--promo {
+    padding-top: 100px;
+  }
+  .promo {
+    background-position: top -250px center;
+  }
+  .promo--order {
+    background-position: left -50px top;
+  }
+  .promo__price {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .promo__h1 {
+    font-size: 60px;
+  }
+  .niche__wrap {
+    padding-top: 150px;
+  }
+  .work__block {
+    width: 100%;
+    height: 100%;
+  }
+  .stat__spot {
+    width: 100%;
+    background-size: 100% 100%;
+    padding-left: 60px;
+    padding-right: 20px;
+  }
+  .title-h2--stat,
+  .stat__block,
+  .stat__wrap {
+    padding-left: 0;
+  }
+}
+@media (max-width: 479px) {
+  .btn--stat {
+    margin-left: 10px;
+  }
+  .wrapper {
+    padding: 0 10px;
+  }
   .wrapper--promo {
     padding-top: 100px;
   }
@@ -2916,43 +2963,29 @@ yx-axis
     font-size: 24px;
     line-height: 36px;
   }
-  .promo__price {
-    font-size: 24px;
-    line-height: 36px;
-  }
   .niche__block {
     padding-left: 10px;
-  }
-  .work__block {
-    width: 100%;
-    height: 100%;
-    padding-top: 100px;
-    padding-left: 30px;
-  }
-}
-@media (max-width: 480px) {
-  .btn--stat {
-    margin-left: 10px;
-  }
-  .wrapper {
-    padding: 0 10px;
-  }
-  .wrapper--promo {
-    padding-top: 100px;
   }
   .step {
     padding-top: 180px;
     background-position: left top;
   }
   .stat__spot {
-    width: 100%;
-    background-size: 100% 100%;
     padding-left: 40px;
-    padding-right: 20px;
   }
-  .title-h2--stat,
-  .stat__block,
-  .stat__wrap {
-    padding-left: 0;
+  .box-modal {
+    width: 320px;
+    padding: 25px 20px;
+  }
+  .box-modal_close {
+    right: 20px;
+  }
+  .modal__contacts,
+  .modal__info {
+    display: none;
+  }
+  .work__block {
+    padding-top: 100px;
+    padding-left: 30px;
   }
 }
