@@ -13,6 +13,10 @@
   .header__call {
     padding-top: 0;
   }
+  
+  .header {
+    padding-bottom: 25px;
+  }
 }
 //------------------------------
 @media @tablet {
@@ -40,12 +44,12 @@
   
   .promo {
     background-size: cover;
-    background-position: top;
+    background-position: top -170px center;
   }
   
   .promo__img {
     left: 65%;
-    z-index: 0;
+    z-index: 1;
     width: 50%;
     height: auto;
   }
@@ -56,6 +60,7 @@
   
   .promo--order {
     padding-top: 100px;
+    background-position: left top;
   }
   
   .niche {
@@ -65,6 +70,7 @@
   .niche__wrap {
     width: 768px;
     flex-wrap: wrap;
+    padding-top: 300px;
   }
   
   .niche__block {
@@ -181,6 +187,7 @@
   .promo {
     min-height: auto;
     padding-bottom: 40px;
+    background-position: top -350px center;
   }
   
   .promo__img {
@@ -289,16 +296,7 @@
   
   .footer {
     padding: 20px 0;
-  }
-  
-  .box-modal {
-    width: 300px;
-    padding: 25px;
-  }
-  
-  .box-modal_close {
-    top: 20px;
-  }
+  }  
 }
 
 //------------------- 660px -----------------
@@ -309,14 +307,12 @@
     }
   }
   
-  .promo__h1 {
-    font-size: 40px;
-    line-height: 48px;
-    
-    span {
-      font-size: 24px;
-      line-height: 36px;
-    }
+  .promo {
+    background-position: top -250px center;
+  }
+  
+  .promo--order {
+    background-position: left -50px top;
   }
   
   .promo__price {
@@ -324,15 +320,30 @@
     line-height: 36px;
   }
 
-  .niche__block {
-    padding-left: 10px;
+  .promo__h1 {
+    font-size: 60px;
+  }
+  
+  .niche__wrap {
+    padding-top: 150px;
   }
   
   .work__block {
     width: 100%;
     height: 100%;
-    padding-top: 100px;
-    padding-left: 30px;
+  }
+  
+  .stat__spot {
+    width: 100%;
+    background-size: 100% 100%;
+    padding-left: 60px;
+    padding-right: 20px;
+  }
+  
+  .title-h2--stat,
+  .stat__block,
+  .stat__wrap {
+    padding-left: 0;
   }
 }
 //--------mobile 480 ------------
@@ -349,23 +360,45 @@
     }
   }
   
+  .promo__h1 {
+    font-size: 40px;
+    line-height: 48px;
+    
+    span {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+  
+  .niche__block {
+    padding-left: 10px;
+  }
+  
   .step {
     padding-top: 180px;
     background-position: left top;
   }
   
   .stat__spot {
-    width: 100%;
-    background-size: 100% 100%;
     padding-left: 40px;
-    padding-right: 20px;
   }
   
-  .title-h2--stat,
-  .stat__block,
-  .stat__wrap {
-    padding-left: 0;
+  .box-modal {
+    width: 320px;
+    padding: 25px 20px;
   }
   
+  .box-modal_close {
+    right: 20px;
+  }
   
+  .modal__contacts,
+  .modal__info {
+    display: none;
+  }
+
+  .work__block {
+    padding-top: 100px;
+    padding-left: 30px;
+  }
 }

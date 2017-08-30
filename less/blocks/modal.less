@@ -13,7 +13,7 @@
   right: 0;
   width: 440px;
   height: 100vh;
-  padding: 45px 55px 45px 50px;
+  padding: 25px 50px;
   background-color: #fff;
   align-items: center;
   z-index: 20;
@@ -29,7 +29,7 @@
 
 .box-modal_close {
   position: absolute;
-  top: 45px;
+  top: 32px;
   right: 55px;
   font-weight: 700;
   text-align: right;
@@ -58,30 +58,35 @@
 
 .modal__field {
   position: relative;
-  padding-top: 15px;
-  margin-bottom: 10px;
+  padding-top: 1px;
+  margin-bottom: 5px;
 }
 
 .modal__label {
-  display: none;
   position: absolute;
-  top: 0;
+  top: 15px;
   left: 0;
-  color: #333;
-  font-size: 9px;
+  color: #a8a8a8;
+  font-size: 13px;
   line-height: 1.2;
   font-weight: 100;
+  
 }
 
 .modal__input {
-  font-weight: 100;
+  font-weight: 400;
   width: 100%;
   min-height: 21px;
   border: none;
+  outline: none;
+  padding: 10px 0;
   border-bottom: 1px solid rgba(51,51,51,0.3);
   
   &:focus + .modal__label {
-    display: block;
+    top: 0;
+    font-size: 9px;
+    transform: translate3d(0, 0, 0);
+    transition: all .2s ease-in-out;
   }
   
   &:focus {
@@ -94,16 +99,15 @@
 }
 
 .modal__send {
-  width: 124px;
-  min-height: 35px;
+  width: 125px;
+  min-height: 36px;
   margin-top: 40px;
   font-size: 16px;
   line-height: 1.2;
-  font-weight: 300;
-  letter-spacing: 1px;
+  font-weight: 400;
   border: 1px solid @normal;
   background-color: transparent;
-  border-radius: 20px;
+  border-radius: 50px;
   cursor: pointer;
   transition: ease-out 0.5s;
   
@@ -118,15 +122,15 @@
   margin: 0;
   font-size: 24px;
   line-height: 28px;
-  font-weight: 300;
-  letter-spacing: 2px;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
 .modal__info {
   width: 100%;
   margin-top: 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -134,4 +138,5 @@
   font-weight: 100;
   color: @normal;
   text-decoration: none;
+  padding-right: 20px;
 }

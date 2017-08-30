@@ -173,7 +173,7 @@
             </a>
             <div class="work__block">
               <p class="work__name">Фитнес центр</p>
-              <p class="work__person">Заказчик «Fitness for Family»</p>
+<!--              <p class="work__person">Заказчик «Fitness for Family»</p>-->
               <a href="#" class="work__link">Просмотреть работу</a>
             </div>
           </li>
@@ -183,7 +183,7 @@
             </a>
             <div class="work__block">
               <p class="work__name">Архитектурная компания</p>
-              <p class="work__person">Заказчик КИП</p>
+<!--              <p class="work__person">Заказчик КИП</p>-->
               <a href="#" class="work__link">Просмотреть работу</a>
             </div>
           </li>
@@ -193,7 +193,7 @@
             </a>
             <div class="work__block">
               <p class="work__name">Дизайн интерьера</p>
-              <p class="work__person">Заказчик Игорь Стариков</p>
+<!--              <p class="work__person">Заказчик Игорь Стариков</p>-->
               <a href="#" class="work__link">Просмотреть работу</a>
             </div>
           </li>
@@ -203,7 +203,7 @@
             </a>
             <div class="work__block">
               <p class="work__name">Организация «СРО»</p>
-              <p class="work__person">Заказчик «Единство»</p>
+<!--              <p class="work__person">Заказчик «Единство»</p>-->
               <a href="#" class="work__link">Просмотреть работу</a>
             </div>
           </li>
@@ -231,11 +231,11 @@
           <h2 class="modal__title">Оставьте заявку</h2>
           <form action="send.php" method="post" class="modal__form">
             <div class="modal__field">
-              <input type="text" name="name" id="name" class="modal__input" placeholder="Ваше имя" required>
+              <input type="text" name="name" id="name" class="modal__input" required>
               <label for="name" class="modal__label">Ваше имя</label>
             </div>
             <div class="modal__field">
-              <input type="text" name="phone" id="phone" class="modal__input" placeholder="Ваш телефон" required>
+              <input type="text" name="phone" id="phone" class="modal__input" required>
               <label for="phone" class="modal__label">Ваш телефон</label>
             </div>
             <button type="submit" class="modal__send">Отправить</button>
@@ -261,7 +261,7 @@
           overlay: {
           css: {
             backgroundColor: "#000",
-            opacity: .8
+            opacity: .8,
             }
           }
         });
@@ -287,7 +287,13 @@
       $(window).scroll(function(){
         if (document.body.scrollTop >= 100) {
           $(".header").css({
-            'background-color': 'rgba(26,25,30,0.5)'
+            'background-color': 'rgba(26,25,30,0.5)',
+            'transition': 'background-color 0.5s ease'
+          });
+        };
+        if (document.body.scrollTop <= 100) {
+          $(".header").css({
+            'background-color': 'transparent'
           });
         };
       });
